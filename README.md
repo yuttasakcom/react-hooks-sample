@@ -68,3 +68,39 @@ const useStateComponent = () => {
 
 export default useStateComponent;
 ```
+
+## Use Context
+
+```javascript
+// file App.js
+
+export const ConfigContext = React.createContext();
+
+const configValue = {
+  name: 'YoYea',
+};
+
+...
+
+<ConfigContext.Provider value={configValue}>
+  <UseContext />
+</ConfigContext.Provider>
+
+// file useContext.js
+import React, { useContext } from 'react';
+import { ConfigContext } from './App';
+
+const useStateComponent = () => {
+  const context = useContext(ConfigContext);
+
+  return (
+    <section>
+      <h3>Use Context</h3>
+      {context.name && <p>{context.name}</p>}
+    </section>
+  );
+};
+
+export default useStateComponent;
+
+```
