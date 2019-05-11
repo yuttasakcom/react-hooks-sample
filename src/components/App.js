@@ -10,6 +10,7 @@ export const ConfigContext = React.createContext();
 
 const configValue = {
   name: 'YoYea',
+  users: [],
 };
 
 const App = () => (
@@ -20,7 +21,7 @@ const App = () => (
     <ConfigContext.Provider value={configValue}>
       <UseContext />
     </ConfigContext.Provider>
-    <UseReducer />
+    <UseReducer initialState={configValue.users} />
   </div>
 );
 

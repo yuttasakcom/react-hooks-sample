@@ -11,8 +11,8 @@ const usersReducer = (state, action) => {
   }
 };
 
-const useStateComponent = () => {
-  const [users, dispatch] = useReducer(usersReducer, []);
+const useStateComponent = ({ initialState }) => {
+  const [users, dispatch] = useReducer(usersReducer, initialState);
 
   useEffect(() => {
     axios
