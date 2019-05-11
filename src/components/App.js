@@ -1,17 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-import ResourceList from './ResourceList'
+import UseStateComponent from './useState';
+import UseRef from './useRef';
 
-const App = () => {
-    const [resource, setResource] = useState('posts')
+const App = () => (
+  <div>
+    <UseStateComponent />
+    <UseRef />
+  </div>
+);
 
-    return (<div>
-        <div>
-            <button onClick={() => setResource('posts')}>Posts</button>
-            <button onClick={() => setResource('todos')}>Todos</button>
-        </div>
-        <ResourceList resource={resource} />
-    </div>)
-}
-
-export default App
+export default App;

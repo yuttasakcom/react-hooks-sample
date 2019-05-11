@@ -1,27 +1,3 @@
-# React Hooks Sample
-
-## Use State
-
-```javascript
-import React, { useState } from 'react';
-
-const useStateComponent = () => {
-  const [name, setName] = useState('');
-  return (
-    <section>
-      <h3>Use State</h3>
-      {name && <p>{name}</p>}
-      <button onClick={() => setName('YoYea')}>click me!</button>
-    </section>
-  );
-};
-
-export default useStateComponent;
-```
-
-## Use Ref
-
-```javascript
 import React, { useRef } from 'react';
 
 const useStateComponent = () => {
@@ -44,6 +20,3 @@ const useStateComponent = () => {
 };
 
 export default useStateComponent;
-```
-
-## Use Effect
