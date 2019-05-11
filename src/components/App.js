@@ -4,6 +4,7 @@ import UseStateComponent from './useState';
 import UseRef from './useRef';
 import UseEffect from './useEffect';
 import UseContext from './useContext';
+import UseReducer from './useReducer';
 
 export const ConfigContext = React.createContext();
 
@@ -19,6 +20,7 @@ const App = () => (
     <ConfigContext.Provider value={configValue}>
       <UseContext />
     </ConfigContext.Provider>
+    <UseReducer />
   </div>
 );
 
